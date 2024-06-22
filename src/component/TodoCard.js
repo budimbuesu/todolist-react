@@ -3,7 +3,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 function TodoCard(props) {
   const { children } = props;
-  console.log(props);
   return (
     <li className="todoItem">
       <div className="actionsContainer">
