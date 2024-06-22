@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-function TodoInput(props) {
-  const { handleTodoList } = props;
-  const [newTodo, setNewTodo] = useState("");
+function TodoInput({ handleTodoList, newTodo, setNewTodo }) {
   return (
     <header>
       <input
@@ -15,6 +11,7 @@ function TodoInput(props) {
       <button
         onClick={() => {
           handleTodoList(newTodo);
+          setNewTodo("");
         }}
       >
         Add

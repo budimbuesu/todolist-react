@@ -1,14 +1,25 @@
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-function TodoCard(props) {
-  const { children } = props;
+function TodoCard({ todo, index, handleDeleteTodo, handleUpdate }) {
   return (
     <li className="todoItem">
       <div className="actionsContainer">
-        {children}
-        <BorderColorIcon />
-        <DeleteIcon />
+        <p> {todo}</p>
+        <button
+          onClick={() => {
+            handleUpdate(index);
+          }}
+        >
+          <BorderColorIcon />
+        </button>
+        <button>
+          <DeleteIcon
+            onClick={() => {
+              handleDeleteTodo(index);
+            }}
+          />
+        </button>
       </div>
     </li>
   );

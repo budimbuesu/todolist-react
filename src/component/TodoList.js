@@ -1,14 +1,12 @@
 import TodoCard from "./TodoCard";
 
-function TodoList({ todos }) {
+function TodoList(props) {
+  const { todos } = props;
+
   return (
     <ul className="main">
       {todos.map((todo, index) => {
-        return (
-          <TodoCard key={index}>
-            <p>{todo}</p>
-          </TodoCard>
-        );
+        return <TodoCard {...props} todo={todo} key={index} index={index} />;
       })}
     </ul>
   );
