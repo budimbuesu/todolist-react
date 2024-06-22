@@ -1,12 +1,6 @@
 import TodoCard from "./TodoCard";
 
-function TodoList() {
-  let todos = [
-    "Eat more fruits and vege",
-    "Pick up the kids from school",
-    "do bicyclette",
-  ];
-
+function TodoList({ todos }) {
   return (
     <ul className="main">
       {todos.map((todo, index) => {
